@@ -21,6 +21,7 @@ $ yarn start
 ```js
 // umi的src目录下创建app.(js|ts)
 
+
 import { middleware, effect } from 'umi-redux-cache'
 
 export const dva = {
