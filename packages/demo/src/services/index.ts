@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export async function fetchList() {
-    return axios.get('/all').then(response => {
+    return axios.get('/api/all').then(response => {
         const data = response.data;
         const code = response.status;
         return {
@@ -11,8 +11,8 @@ export async function fetchList() {
     })
 }
 
-export async function fetchDetail() {
-    return axios.get('/detail').then(response => {
+export async function fetchDetail(id) {
+    return axios.get(`/api/detail/${id}`).then(response => {
         const data = response.data;
         const code = response.status;
         return {

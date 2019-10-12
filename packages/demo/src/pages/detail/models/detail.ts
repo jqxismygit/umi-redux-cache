@@ -9,15 +9,16 @@ const DetailModel = {
         content: {}
     },
     effects: {
-        *fetchDetail(_, { call, put }) {
-            const response = yield call(fetchDetail);
+        *fetchDetail(effectAction, { call, put }) {
+
+            const response = yield call(fetchDetail, effectAction.payload.id);
             if (response && response.code === 200) {
                 const detail = response.data || {};
                 // yield put({
                 //     type: 'update',
                 //     payload: detail
                 // });
-                yield put(createCachedAction(_, {
+                yield put(createCachedAction(effectAction, {
                     type: 'update',
                     payload: detail
                 }))

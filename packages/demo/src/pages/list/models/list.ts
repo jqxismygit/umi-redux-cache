@@ -10,14 +10,9 @@ const ListModel = {
     },
     effects: {
         *fetchList(_, { call, put }) {
-            console.log('fetchList--------->>');
             const response = yield call(fetchList);
             if (response && response.code === 200) {
                 const list = response.data || [];
-                // yield put({
-                //     type: 'update',
-                //     payload: list
-                // });
                 yield put(createCachedAction(_, {
                     type: 'update',
                     payload: list

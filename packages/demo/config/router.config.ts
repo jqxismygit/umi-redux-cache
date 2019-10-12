@@ -8,7 +8,7 @@ export default {
           component: './list'
         },
         {
-          path: '/detail',
+          path: '/detail/:id',
           component: './detail'
         }
       ]

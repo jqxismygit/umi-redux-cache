@@ -18,7 +18,7 @@ const routes = [
         exact: true,
       },
       {
-        path: '/detail',
+        path: '/detail/:id',
         component: require('../detail').default,
         exact: true,
       },

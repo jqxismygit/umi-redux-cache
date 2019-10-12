@@ -3,7 +3,7 @@ import { connect } from 'dva';
 import Link from 'umi/link';
 
 const List = (props) => {
-    const { dispatch } = props;
+    const { dispatch, allIds } = props;
     React.useEffect(() => {
         dispatch({
             type: 'list/fetchList'
@@ -12,9 +12,18 @@ const List = (props) => {
     return (
         <>
             <div>List</div>
-            <Link to={'/detail'}>详情</Link>
+            {
+                allIds && allIds.map(i => (
+                    <div key={i.id} style={{ marginTop: '10px' }}>
+                        <Link to={`/detail/${i.id}`}>{i.name}</Link>
+                    </div>
+                ))
+            }
+
         </>
     )
 }
 
-export default connect()(List);
+export default connect(({ list }) => ({
+    allIds: list.allIds
+}))(List);
