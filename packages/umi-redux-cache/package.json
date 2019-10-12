@@ -1,0 +1,12 @@
+{
+  "name": "umi-redux-cache",
+  "version": "1.0.0",
+  "main": "./lib/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "father-build": "^1.12.0"
+  },
+  "scripts": {
+    "start": "father-build"
+  }
+}
