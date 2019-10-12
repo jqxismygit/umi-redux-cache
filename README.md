@@ -37,6 +37,7 @@ export const dva = {
 ```js
 import { createCachedAction } from 'umi-redux-cache'
 //使用非常简单，调用createCachedAction来创建action就能缓存
+//具体参考例子里面的使用方法
 createCachedAction(proxyAction, {
     type: 'update',
     payload: []
