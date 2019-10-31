@@ -1,8 +1,22 @@
 {
   "name": "umi-redux-cache",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./lib/index.js",
   "license": "MIT",
+  "author": {
+    "name": "king",
+    "email": "117745900@qq.com"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "umi",
+    "cache"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jqxismygit/babel-plugin-jsx-wapper"
+  },
   "devDependencies": {
     "father-build": "^1.12.0"
   },
